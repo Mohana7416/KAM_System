@@ -1,14 +1,17 @@
 package com.Udaan.KAM_System.Entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.boot.autoconfigure.web.WebProperties;
 
 import java.lang.reflect.GenericArrayType;
 
 @Entity
 @Data
-
+@AllArgsConstructor
+@NoArgsConstructor
 public class KAM {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

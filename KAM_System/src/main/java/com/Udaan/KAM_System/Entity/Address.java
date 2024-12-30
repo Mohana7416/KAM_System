@@ -1,17 +1,21 @@
 package com.Udaan.KAM_System.Entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-public class Adress {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Address {
     @Id
-    @Column(name = "adress_id")
+    @Column(name = "address_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int adressId;
-    @Column(name = "street_adress")
-    private String streetAdress;
+    private int addressId;
+    @Column(name = "street_address")
+    private String streetAddress;
     private String city;
     private String state;
     private String country;
