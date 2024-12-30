@@ -24,7 +24,10 @@ public class Lead_Mangement
     @Column(name = "email")
     private String email;
     private String website;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "adress_id", referencedColumnName = "adress_id")
     private Adress adress;
+    //@ManyToOne
 //    @Column(name = "assigned_kam_first_name")
 //    private String assignedKAMFirstName;
 //    @Column(name = "assigned_kam_last_name")
