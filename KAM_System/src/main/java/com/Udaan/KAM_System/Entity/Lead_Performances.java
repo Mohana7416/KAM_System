@@ -7,16 +7,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Lead_Performances {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int leadPerformanceId;
     @Enumerated(EnumType.STRING)
     private LeadPerformancesStatus status;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "lead_id",referencedColumnName = "lead_id")
-    private Lead_Management leadManagement;
+
 
 }

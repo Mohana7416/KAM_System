@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -35,6 +37,9 @@ public class Lead_Management
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "kam_id",referencedColumnName = "kam_id")
     private KAM kam;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "lead_id",referencedColumnName = "lead_id")
+    private List<Orders> orders;
 
 
 
